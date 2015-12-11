@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <EditText
+        android:id="@+id/edNoKredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hintNoKredit"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="26dp"
+        android:layout_toStartOf="@+id/btnPost" />
+
+    <Button android:id="@+id/btnPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:layout_alignTop="@+id/edNoKredit"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/edNoKredit" />
+
+    <TextView android:id="@+id/txtNoKredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="No Kredit"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/edNoKredit"
+        android:layout_alignParentStart="true" />
+
+    <TextView android:id="@+id/txtNamaNasabah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nama"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/txtNoKredit"
+        android:layout_alignParentStart="true" />
+
+    <TextView android:id="@+id/txtUangPinjaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Uang Pinjaman"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/txtNamaNasabah"
+        android:layout_alignParentStart="true" />
+
+    <EditText android:id="@+id/resNoKredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtNamaNasabah"
+        android:layout_alignEnd="@+id/btnPost"
+        android:layout_toEndOf="@+id/txtUangPinjaman"
+        android:editable="false" />
+
+    <EditText android:id="@+id/resNamaNasabah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtNamaNasabah"
+        android:layout_alignEnd="@+id/btnPost"
+        android:layout_alignStart="@+id/resNoKredit" />
+
+    <EditText android:id="@+id/resUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtUangPinjaman"
+        android:layout_alignEnd="@+id/btnPost"
+        android:layout_toEndOf="@+id/txtUangPinjaman" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:id="@+id/button"
+        android:layout_below="@+id/txtUangPinjaman"
+        android:layout_toEndOf="@+id/txtUangPinjaman"
+        android:layout_marginTop="49dp" />
+
+
+</RelativeLayout>
